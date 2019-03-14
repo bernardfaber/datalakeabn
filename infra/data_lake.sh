@@ -17,8 +17,8 @@ az storage account create \
 --hierarchical-namespace true
 
 DATA_LAKE_WORKFLOW='bernarddatafactory'
-ARM_LOCATION='data_factory.json'
-ARM_PROPS_LOCATION='data_factory_prop.json'
+ARM_LOCATION='arm/data_factory.json'
+ARM_PROPS_LOCATION='conf/data_factory_prop.json'
 # Create Data Factory Version 2 
 az group deployment create \
  --name $DATA_LAKE_WORKFLOW \
@@ -53,8 +53,8 @@ az sql server firewall-rule create \
  --end-ip-address 0.0.0.0
 
  DATA_LAKE_WORKFLOW_DB='bernarddatabricks_workflowdb'
-ARM_LOCATION_DB='databricks.json'
-ARM_PROPS_LOCATION_DB='databricks_prop.json'
+ARM_LOCATION_DB='arm/databricks.json'
+ARM_PROPS_LOCATION_DB='conf/databricks_prop.json'
 # Create Azure Databricks 
 az group deployment create \
  --name $DATA_LAKE_WORKFLOW_DB \
